@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pixel Game | دانلود بازی</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ========================================================= -->
+<!-- HEADER -->
+<!-- ========================================================= -->
+<header>
+  <div class="header-row">
+    <button class="menu-btn" id="navBtn" aria-label="منو" onclick="goHome()">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <div class="header-spacer"></div>
+    <div class="header-logo" onclick="goHome()">
+      <span><b>Pixel</b>Game</span>
+    </div>
+  </div>
+  <div class="search-wrap" id="searchWrap">
+    <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    <input type="text" id="searchInput" placeholder="دنبال چه بازی‌ای هستی؟" autocomplete="off">
+    
+    <div class="search-results" id="searchResults">
+      <div class="search-loading" id="searchLoading">
+        <div class="search-spinner"></div>
+        <span>در حال جستجو...</span>
+      </div>
+      <div class="search-list" id="searchList"></div>
+      <div class="search-empty" id="searchEmpty">
+  <img src="icons/icon-search-empty.svg" width="56" height="56" alt="نتیجه‌ای یافت نشد">
+  <p>هیچ بازی‌ای پیدا نشد</p>
+</div>
+    </div>
+  </div>
+</header>
+
+<!-- ========================================================= -->
+<!-- لودینگ Overlay -->
+<!-- ========================================================= -->
+<div class="loading-overlay" id="loadingOverlay">
+  <div class="loading-spinner-wrapper">
+    <div class="loading-spinner"></div>
+    <span>در حال بارگذاری...</span>
+  </div>
+</div>
+
+<!-- ========================================================= -->
+<!-- صفحه اصلی -->
+<!-- ========================================================= -->
+<div class="page active" id="page-home">
+
+  <nav class="cat-rail">
+    <a class="cat-item" data-genre="اکشن">
+      <div class="cat-icon" style="background:rgba(255,59,122,0.12); color:var(--magenta);">
+        <img src="icons/icon-action.svg" width="52" height="52" alt="اکشن">
+      </div>
+      <span>اکشن</span>
+    </a>
+    <a class="cat-item" data-genre="استراتژی">
+      <div class="cat-icon" style="background:rgba(47,227,214,0.12); color:var(--cyan);">
+        <img src="icons/icon-strategy.svg" width="52" height="52" alt="استراتژی">
+      </div>
+      <span>استراتژی</span>
+    </a>
+    <a class="cat-item" data-genre="آرکید">
+      <div class="cat-icon" style="background:rgba(255,59,122,0.12); color:var(--magenta);">
+        <img src="icons/icon-arcade.svg" width="52" height="52" alt="آرکید">
+      </div>
+      <span>آرکید</span>
+    </a>
+    <a class="cat-item" data-genre="ورزشی">
+      <div class="cat-icon" style="background:rgba(47,227,214,0.12); color:var(--cyan);">
+        <img src="icons/icon-sports.svg" width="52" height="52" alt="ورزشی">
+      </div>
+      <span>ورزشی</span>
+    </a>
+    <a class="cat-item" data-genre="پازل">
+      <div class="cat-icon" style="background:rgba(255,59,122,0.12); color:var(--magenta);">
+        <img src="icons/icon-puzzle.svg" width="52" height="52" alt="پازل">
+      </div>
+      <span>پازل</span>
+    </a>
+    <a class="cat-item" data-genre="فارسی‌ساز">
+      <div class="cat-icon" style="background:rgba(47,227,214,0.12); color:var(--cyan);">
+        <img src="icons/icon-farsi.svg" width="52" height="52" alt="فارسی‌ساز">
+      </div>
+      <span>فارسی‌ساز</span>
+    </a>
+  </nav>
+
+  <!-- ===== بخش نتایج ژانر (مثل تازه‌ترین بازی‌ها) ===== -->
+  <div class="wrap">
+    <section class="section" id="genreResults" style="display:none;">
+      <div class="section-head">
+        <h2>بازی‌های <em id="genreTitle">اکشن</em></h2>
+        <button class="see-all" onclick="closeGenreFilter()">بستن</button>
+      </div>
+      <div class="cart-rail" id="genreGrid"></div>
+    </section>
+  </div>
+
+  <section class="hero-section">
+    <div class="hero-slider scanlines" id="heroSlider"></div>
+    <div class="hero-dots" id="heroDots"></div>
+  </section>
+
+  <div class="wrap">
+    <section class="section" id="section-latest">
+      <div class="section-head">
+        <h2>تازه‌ترین <em>بازی‌ها</em></h2>
+        <a class="see-all">همه<svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
+      </div>
+      <div class="cart-rail" id="latestGames"></div>
+    </section>
+
+    <!-- ===== پربازدیدترین‌ها ===== -->
+    <section class="section">
+      <div class="section-head">
+        <h2>پربازدیدترین <em>بازی‌ها</em></h2>
+        <a class="see-all">۱۰۰ تای برتر<svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
+      </div>
+      <div class="trending-grid" id="trendingGames"></div>
+    </section>
+
+    <section class="section" id="section-new">
+      <div class="section-head">
+        <h2>بازی‌های <em>جدید</em></h2>
+        <a class="see-all">همه<svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
+      </div>
+      <div class="cart-rail" id="newGames"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>آپدیت <em>بازی‌ها</em></h2>
+      </div>
+      <div id="updatesContainer"></div>
+    </section>
+  </div>
+
+</div>
+
+<!-- ========================================================= -->
+<!-- صفحه جزئیات -->
+<!-- ========================================================= -->
+<div class="page" id="page-detail">
+
+  <div class="wrap">
+
+    <div class="game-head">
+      <div class="game-icon scanlines" id="detailIcon">🔴</div>
+      <div class="game-info">
+        <h1 id="detailTitle">Shadows of Runeborn</h1>
+        <div class="dev" id="detailDev">DeepVault Studio</div>
+        <div class="chip-row" id="detailChips"></div>
+      </div>
+    </div>
+
+    <div class="stats-strip" id="detailStats">
+      <div class="stat"><b class="accent" id="statRating">۴.۷</b><span>امتیاز</span></div>
+      <div class="stat"><b id="statSize">۹۵۰ MB</b><span>حجم فایل</span></div>
+      <div class="stat"><b id="statDownloads">۲.۱ M</b><span>دانلود</span></div>
+      <div class="stat"><b id="statOS">7.1+</b><span>اندروید</span></div>
+    </div>
+
+    <div class="section">
+      <div class="section-head"><h2>تصاویر <em>بازی</em></h2></div>
+      <div class="shots-rail" id="detailShots"></div>
+    </div>
+
+    <div class="section desc">
+      <div class="section-head"><h2>درباره <em>بازی</em></h2></div>
+      <p class="clamp" id="detailDesc">توضیحات بازی...</p>
+      <a class="read-more" onclick="toggleDesc(this)">ادامه مطلب
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </a>
+    </div>
+
+    <div class="dl-box" id="dlBox">
+      <div class="dl-box-head">
+        <span>نسخه‌های موجود برای دانلود</span>
+        <button class="spec-btn" id="specToggle" onclick="toggleSpecs()">مشخصات</button>
+      </div>
+      <div class="spec-content" id="specContent">
+        <h3>مشخصات فنی بازی</h3>
+        <p id="specText"></p>
+      </div>
+      <div id="dlOptions"></div>
+    </div>
+
+    <div class="section">
+      <div class="section-head"><h2>اطلاعات <em>فنی</em></h2></div>
+      <div class="info-table mono" id="detailInfo"></div>
+    </div>
+
+    <div class="section">
+      <div class="section-head">
+        <h2>بازی‌های <em>مشابه</em></h2>
+        <a class="see-all">همه<svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
+      </div>
+      <div class="cart-rail" id="detailRelated"></div>
+    </div>
+
+  </div>
+
+</div>
+
+<footer>
+  <p>تمامی لینک‌ها جمع‌آوری شده از منابع دیگر</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
