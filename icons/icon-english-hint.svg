@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 16" width="176" height="64">
+  <style>
+    rect { shape-rendering: crispEdges; }
+  </style>
+  
+  <!-- ===== Letter A (Red) ===== -->
+  <rect x="2" y="0" width="2" height="2" fill="#ff5555"/>
+  <rect x="4" y="0" width="2" height="2" fill="#ff6666"/>
+  <rect x="6" y="0" width="2" height="2" fill="#ff5555"/>
+  
+  <rect x="0" y="2" width="2" height="2" fill="#ff5555"/>
+  <rect x="8" y="2" width="2" height="2" fill="#ee4444"/>
+  
+  <rect x="0" y="4" width="2" height="2" fill="#ff5555"/>
+  <rect x="2" y="4" width="2" height="2" fill="#ff6666"/>
+  <rect x="4" y="4" width="2" height="2" fill="#ff6666"/>
+  <rect x="6" y="4" width="2" height="2" fill="#ee4444"/>
+  <rect x="8" y="4" width="2" height="2" fill="#dd3333"/>
+  
+  <rect x="0" y="6" width="2" height="2" fill="#ee4444"/>
+  <rect x="8" y="6" width="2" height="2" fill="#cc2222"/>
+  
+  <rect x="0" y="8" width="2" height="2" fill="#dd3333"/>
+  <rect x="8" y="8" width="2" height="2" fill="#bb1111"/>
+  
+  <!-- A Highlights & Shadows -->
+  <rect x="2" y="0" width="6" height="1" fill="#ff8888"/>
+  <rect x="0" y="2" width="1" height="4" fill="#ff7777"/>
+  <rect x="9" y="4" width="1" height="6" fill="#aa1111"/>
+  
+  
+  <!-- ===== Letter B (Green) ===== -->
+  <rect x="14" y="0" width="2" height="2" fill="#55dd55"/>
+  <rect x="16" y="0" width="2" height="2" fill="#66ee66"/>
+  <rect x="18" y="0" width="2" height="2" fill="#55dd55"/>
+  
+  <rect x="14" y="2" width="2" height="2" fill="#55dd55"/>
+  <rect x="20" y="2" width="2" height="2" fill="#44cc44"/>
+  
+  <rect x="14" y="4" width="2" height="2" fill="#55dd55"/>
+  <rect x="16" y="4" width="2" height="2" fill="#55dd55"/>
+  <rect x="18" y="4" width="2" height="2" fill="#44cc44"/>
+  
+  <rect x="14" y="6" width="2" height="2" fill="#44cc44"/>
+  <rect x="20" y="6" width="2" height="2" fill="#33bb33"/>
+  
+  <rect x="14" y="8" width="2" height="2" fill="#33bb33"/>
+  <rect x="16" y="8" width="2" height="2" fill="#33bb33"/>
+  <rect x="18" y="8" width="2" height="2" fill="#22aa22"/>
+  <rect x="20" y="8" width="2" height="2" fill="#22aa22"/>
+  
+  <!-- B Highlights & Shadows -->
+  <rect x="14" y="0" width="6" height="1" fill="#88ff88"/>
+  <rect x="14" y="0" width="1" height="5" fill="#77ff77"/>
+  <rect x="21" y="3" width="1" height="2" fill="#119911"/>
+  <rect x="21" y="7" width="1" height="3" fill="#119911"/>
+  
+  
+  <!-- ===== Letter C (Blue) ===== -->
+  <rect x="28" y="0" width="2" height="2" fill="#5599ff"/>
+  <rect x="30" y="0" width="2" height="2" fill="#66aaff"/>
+  <rect x="32" y="0" width="2" height="2" fill="#5599ff"/>
+  <rect x="34" y="0" width="2" height="2" fill="#5599ff"/>
+  
+  <rect x="26" y="2" width="2" height="2" fill="#5599ff"/>
+  <rect x="36" y="2" width="2" height="2" fill="#4488ee"/>
+  
+  <rect x="26" y="4" width="2" height="2" fill="#4488ee"/>
+  
+  <rect x="26" y="6" width="2" height="2" fill="#3377dd"/>
+  <rect x="36" y="6" width="2" height="2" fill="#2266cc"/>
+  
+  <rect x="28" y="8" width="2" height="2" fill="#2266cc"/>
+  <rect x="30" y="8" width="2" height="2" fill="#2266cc"/>
+  <rect x="32" y="8" width="2" height="2" fill="#1155bb"/>
+  <rect x="34" y="8" width="2" height="2" fill="#1155bb"/>
+  <rect x="36" y="8" width="2" height="2" fill="#1155bb"/>
+  
+  <!-- C Highlights & Shadows -->
+  <rect x="28" y="0" width="8" height="1" fill="#88ccff"/>
+  <rect x="26" y="2" width="1" height="3" fill="#77bbff"/>
+  <rect x="28" y="9" width="10" height="1" fill="#0044aa"/>
+</svg>

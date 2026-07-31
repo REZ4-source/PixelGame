@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="128" height="128">
+  <style>
+    rect { shape-rendering: crispEdges; }
+  </style>
+  <!-- Background -->
+  <rect width="32" height="32" fill="#f0e6d3" rx="4"/>
+
+  <!-- Grid pattern background -->
+  <rect x="2" y="2" width="2" height="2" fill="#e8dcc8" opacity="0.5"/>
+  <rect x="6" y="6" width="2" height="2" fill="#e8dcc8" opacity="0.5"/>
+  <rect x="26" y="26" width="2" height="2" fill="#e8dcc8" opacity="0.5"/>
+
+  <!-- PUZZLE PIECE 1 - Top Left (Red) -->
+  <rect x="3" y="3" width="10" height="10" fill="#e74c3c"/>
+  <rect x="3" y="3" width="10" height="1" fill="#f05a4a"/>
+  <rect x="3" y="3" width="1" height="10" fill="#f05a4a"/>
+  <rect x="12" y="3" width="1" height="10" fill="#c0392b"/>
+  <rect x="3" y="12" width="10" height="1" fill="#c0392b"/>
+
+  <!-- Tab going right from piece 1 -->
+  <rect x="13" y="6" width="2" height="4" fill="#e74c3c"/>
+  <rect x="13" y="6" width="2" height="1" fill="#f05a4a"/>
+  <rect x="13" y="9" width="2" height="1" fill="#c0392b"/>
+
+  <!-- Tab going down from piece 1 -->
+  <rect x="6" y="13" width="4" height="2" fill="#e74c3c"/>
+  <rect x="6" y="13" width="1" height="2" fill="#f05a4a"/>
+  <rect x="9" y="13" width="1" height="2" fill="#c0392b"/>
+
+  <!-- Shine on piece 1 -->
+  <rect x="4" y="4" width="2" height="1" fill="#ff6b5b"/>
+  <rect x="4" y="5" width="1" height="1" fill="#ff6b5b"/>
+
+  <!-- PUZZLE PIECE 2 - Top Right (Blue) -->
+  <rect x="17" y="3" width="12" height="10" fill="#3498db"/>
+  <rect x="17" y="3" width="12" height="1" fill="#4aa8eb"/>
+  <rect x="17" y="3" width="1" height="10" fill="#4aa8eb"/>
+  <rect x="28" y="3" width="1" height="10" fill="#2980b9"/>
+  <rect x="17" y="12" width="12" height="1" fill="#2980b9"/>
+
+  <!-- Slot on left of piece 2 -->
+  <rect x="15" y="6" width="2" height="4" fill="#3498db"/>
+  <rect x="15" y="6" width="2" height="1" fill="#4aa8eb"/>
+  <rect x="15" y="9" width="2" height="1" fill="#2980b9"/>
+
+  <!-- Tab going down from piece 2 -->
+  <rect x="21" y="13" width="4" height="2" fill="#3498db"/>
+  <rect x="21" y="13" width="1" height="2" fill="#4aa8eb"/>
+  <rect x="24" y="13" width="1" height="2" fill="#2980b9"/>
+
+  <!-- Shine on piece 2 -->
+  <rect x="18" y="4" width="2" height="1" fill="#5bb8f0"/>
+  <rect x="18" y="5" width="1" height="1" fill="#5bb8f0"/>
+
+  <!-- PUZZLE PIECE 3 - Bottom Left (Green) -->
+  <rect x="3" y="17" width="10" height="12" fill="#2ecc71"/>
+  <rect x="3" y="17" width="10" height="1" fill="#3edc81"/>
+  <rect x="3" y="17" width="1" height="12" fill="#3edc81"/>
+  <rect x="12" y="17" width="1" height="12" fill="#27ae60"/>
+  <rect x="3" y="28" width="10" height="1" fill="#27ae60"/>
+
+  <!-- Slot on top of piece 3 -->
+  <rect x="6" y="15" width="4" height="2" fill="#2ecc71"/>
+  <rect x="6" y="15" width="1" height="2" fill="#3edc81"/>
+  <rect x="9" y="15" width="1" height="2" fill="#27ae60"/>
+
+  <!-- Tab going right from piece 3 -->
+  <rect x="13" y="21" width="2" height="4" fill="#2ecc71"/>
+  <rect x="13" y="21" width="2" height="1" fill="#3edc81"/>
+  <rect x="13" y="24" width="2" height="1" fill="#27ae60"/>
+
+  <!-- Shine on piece 3 -->
+  <rect x="4" y="18" width="2" height="1" fill="#4eec91"/>
+  <rect x="4" y="19" width="1" height="1" fill="#4eec91"/>
+
+  <!-- PUZZLE PIECE 4 - Bottom Right (Yellow) -->
+  <rect x="17" y="17" width="12" height="12" fill="#f39c12"/>
+  <rect x="17" y="17" width="12" height="1" fill="#f5ac32"/>
+  <rect x="17" y="17" width="1" height="12" fill="#f5ac32"/>
+  <rect x="28" y="17" width="1" height="12" fill="#d68910"/>
+  <rect x="17" y="28" width="12" height="1" fill="#d68910"/>
+
+  <!-- Slot on top of piece 4 -->
+  <rect x="21" y="15" width="4" height="2" fill="#f39c12"/>
+  <rect x="21" y="15" width="1" height="2" fill="#f5ac32"/>
+  <rect x="24" y="15" width="1" height="2" fill="#d68910"/>
+
+  <!-- Slot on left of piece 4 -->
+  <rect x="15" y="21" width="2" height="4" fill="#f39c12"/>
+  <rect x="15" y="21" width="2" height="1" fill="#f5ac32"/>
+  <rect x="15" y="24" width="2" height="1" fill="#d68910"/>
+
+  <!-- Shine on piece 4 -->
+  <rect x="18" y="18" width="2" height="1" fill="#ffbc42"/>
+  <rect x="18" y="19" width="1" height="1" fill="#ffbc42"/>
+</svg>
