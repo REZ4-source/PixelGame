@@ -1,0 +1,77 @@
+{
+  "releases": [
+  
+  
+  
+  
+  
+  
+    {
+      "gameId": "terraria",
+      "version": "v1.4.5.6",
+      "fileName": "نسخه اصلی",
+      "downloadLink": "https://www.dl.farsroid.com/game/Terraria-1.4.5.6.4(www.Farsroid.com).apk",
+      "fileSize": "208MB",
+      "updateDate": "2026-07-28",
+      "isLatest": true,
+      "type": "main"
+    },
+    {
+      "gameId": "terraria",
+      "version": "v1.4.5.6",
+      "fileName": "نسخه مود شده",
+      "downloadLink": "https://www.dl.farsroid.com/game/Terraria-1.4.5.6.4-Mod1(www.Farsroid.com).apk",
+      "fileSize": "169MB",
+      "updateDate": "2026-07-28",
+      "isLatest": true,
+      "type": "mod"
+    },
+     {
+      "gameId": "terraria",
+      "version": "v1.4.5.6",
+      "fileName": "نسخه مود شد ۲",
+      "downloadLink": "https://www.dl.farsroid.com/game/Terraria-1.4.5.6.4-Mod2(www.Farsroid.com).apk",
+      "fileSize": "169MB",
+      "updateDate": "2026-07-28",
+      "isLatest": true,
+      "type": "mod"
+    },
+    
+    
+    {
+      "gameId": "pubg",
+      "version": "v4.5.0",
+      "fileName": "دانلود نسخه اصلی",
+      "downloadLink": "https://www.dl.farsroid.com/game/PUBG-MOBILE-4.5.0(www.farsroid.com).apk",
+      "fileSize": "1366MB",
+      "updateDate": "2026-07-28",
+      "isLatest": true,
+      "type": "main"
+    },
+    
+    {
+      "gameId": "Call-of-Duty",
+      "version": "v1.0.56",
+      "fileName": "دانلود نسخه اصلی",
+      "downloadLink": "https://www.dl.farsroid.com/game/Call-of-Duty-Mobile-1.0.56(www.farsroid.com).xapk",
+      "fileSize": "2138MB",
+      "updateDate": "2026-07-28",
+      "isLatest": true,
+      "type": "main"
+    }
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  ]
+}
